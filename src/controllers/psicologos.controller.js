@@ -7,7 +7,6 @@ const psicologoController = {
       const psicologos = await Psicologos.findAll({
         include: Atendimentos
       });
-      res.json(psicologos);
 
       if (!psicologos)
       return res.json.status(200)('Ocorreu um erro na requisição');
